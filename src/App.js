@@ -91,11 +91,12 @@ const App = () => {
           {step === 1 && (
             <div>
               <h2>Step 1: Personal Details</h2>
-              <input type="text" name="name" value={formData.personalDetails.name} onChange={handleChange} />
+              <input type="text" name="name" placeholder="Enter your Name" value={formData.personalDetails.name} onChange={handleChange} />
               {errors.name && <div className="error">{errors.name}</div>}
               <input
                 type="text"
                 name="email"
+                placeholder="Enter your Email"
                 value={formData.personalDetails.email}
                 onChange={handleEmailChange}
               />
@@ -119,6 +120,7 @@ const App = () => {
               <input
                 type="number"
                 name="cardNumber"
+                placeholder="Enter your Card Number"
                 value={formData.paymentDetails.cardNumber}
                 onChange={handleChange}
               />
@@ -126,6 +128,7 @@ const App = () => {
               <input
                 type="date"
                 name="expirationDate"
+                placeholder="Enter your Expiration Date"
                 value={formData.paymentDetails.expirationDate}
                 onChange={handleChange}
               />
